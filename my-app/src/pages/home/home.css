@@ -1,0 +1,13 @@
+div.card{
+    border:1px solid grey;
+    margin:10px auto;
+    padding:50px 10px 50px 10px;
+}
+
+div.card > div.card-body {
+    text-align: center;
+    border:2px solid gray;
+    width: 60%;
+    position: relative;
+    left:60px;
+}
