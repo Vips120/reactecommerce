@@ -9,14 +9,24 @@ const Collectionpreview = ({ title, items }) => {
             </div>
 
         </div>
-      <div className="row">
+      {/* <div className="row">
        
         {items.filter((data,idx) => idx < 4).map(({id, ...otherItemprops}) => (
-         <div className="col-md-4">
+         <div className="col-md-4" key={id}>
          <CollectionItem key={id} {...otherItemprops} />
          </div>
         ))}
-      </div>
+      </div> */}
+      {/* using redux */}
+   <div className="row">
+  
+       {items.filter((data,idx) => idx < 4).map((item) => (
+        <div className="col-md-4" key={item.id}>
+        <CollectionItem key={item.id} item={item} />
+        </div>
+       ))}
+     </div>
+
     </div>
   );
 };

@@ -8,6 +8,12 @@ import * as serviceWorker from './serviceWorker';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import store from './redux/store-reducer';
+import firebase from 'firebase/app';
+import 'firebase/firebase-firestore';
+export const firestore = firebase.firestore();
+let item = firestore.collection('users').doc('customer');
+console.log(item);
+
 ReactDOM.render(
     <Provider store={store}>
 <BrowserRouter>

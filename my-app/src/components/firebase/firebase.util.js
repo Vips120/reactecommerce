@@ -2,13 +2,13 @@ import firebase from 'firebase/app';
 import 'firebase/firebase-firestore';
 import 'firebase/firebase-auth';
 const config = {
-    apiKey: "AIzaSyBgwROM_Jjp3Y4VFobhx1pj2cc0T_vKOCQ",
-    authDomain: "vsshop-f5063.firebaseapp.com",
-    databaseURL: "https://vsshop-f5063.firebaseio.com",
-    projectId: "vsshop-f5063",
+    apiKey: "AIzaSyD0MQYfuzp8yOkcZ1hQQONtQXzMSkNKZvE",
+    authDomain: "vsshop-44366.firebaseapp.com",
+    databaseURL: "https://vsshop-44366.firebaseio.com",
+    projectId: "vsshop-44366",
     storageBucket: "",
-    messagingSenderId: "843652685974",
-    appId: "1:843652685974:web:6ba3e235571ae7db"
+    messagingSenderId: "179899787196",
+    appId: "1:179899787196:web:76049caee95ff2b1"
 };
  firebase.initializeApp(config);
  export const auth = firebase.auth();

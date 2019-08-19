@@ -1,7 +1,10 @@
 import React from 'react';
-const CollectionItem = ({id,title,price ,name,imageUrl}) => {
-    return(
-        <div className="container">
+import {connect} from 'react-redux';
+import {addItem} from '../../redux/cart/cart.action';
+const CollectionItem = ({item,addItem}) => {
+   const {id,title,price,name,imageUrl} =  item
+  return(
+        <div className="container" style={{'border':'2px solid red'}}>
             <div className="row">
             <div className="col-md-12" key={id}>
               
@@ -14,7 +17,9 @@ const CollectionItem = ({id,title,price ,name,imageUrl}) => {
                 >
                   <div className="card-body">
                     <h4 className="card-title">{title}</h4>
-                    <p className="card-text">Add Cart</p>
+                    <p className="card-text"
+                     onClick={() => addItem(item)}
+                    >Add Cart</p>
                   </div>
 
                 </div>
@@ -32,4 +37,7 @@ const CollectionItem = ({id,title,price ,name,imageUrl}) => {
     )
 }
 
-export default CollectionItem;
+const mapDispatchToProps = dispatch =>({
+  addItem:item => dispatch(addItem(item))
+});
+export default connect(null,mapDispatchToProps)(CollectionItem);
