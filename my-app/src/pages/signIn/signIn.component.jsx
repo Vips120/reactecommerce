@@ -59,10 +59,8 @@ class SignInPage extends Component {
          value={this.state.password}
          onChange={this.changeHandle}
         />
-    </div>                                     
-    <div className="form-group">
-        <button type="submit" className="btn btn-primary btn-block"> Create Account  </button>
-    </div>    
+    </div>                      
+        <button type="submit" className="btn btn-primary btn-block form-control"> Create Account  </button>
     <p className="text-center">Have an account? <a href="">Sign Up</a> </p>                                                          
 </form>
 </article>

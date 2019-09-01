@@ -1,0 +1,19 @@
+div.card {
+    display: flex;
+    flex-basis: 40%;
+    cursor: pointer;
+}
+div.card > div.twitter > div.card-body  {
+    text-align: center;
+    border: 2px solid gray;
+    width: 60%;
+    position: relative;
+    left: 40px;
+    opacity: 0.8;
+}
+
+div.card > div.twitter > div.card-body > p.card-text  {
+font-size:15px;
+color:white;
+flex-basis: 30%;
+}

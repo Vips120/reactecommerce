@@ -1,8 +1,18 @@
+
+div.container > div.card {
+    background: teal!important;
+}
+p.divider-text > span.bg-light{
+    background-color:teal;
+}
 .divider-text {
     position: relative;
     text-align: center;
     margin-top: 15px;
     margin-bottom: 15px;
+}
+button.btn {
+    width:350px;
 }
 .divider-text span {
     padding: 7px;

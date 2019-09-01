@@ -1,4 +1,13 @@
-
+ span.item {
+     overflow-y: scroll;
+ }
+ span {
+     font-size:12px;
+ }
+ button.btn {
+     width:30px;
+     height: 40px;
+ }
  .item{
     display:block;
     padding:3px 10px;
@@ -35,4 +44,10 @@
 }
 .item-right button{
     margin-top:14px;
+}
+
+span.item-right > button.delete-item{
+    /* width:10px; */
+    
+    padding:10px 0px 10px 0px;
 }

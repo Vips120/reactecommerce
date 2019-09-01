@@ -1,10 +1,11 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {addItem} from '../../redux/cart/cart.action';
+import './collection-item.css';
 const CollectionItem = ({item,addItem}) => {
    const {id,title,price,name,imageUrl} =  item
   return(
-        <div className="container" style={{'border':'2px solid red'}}>
+        <div className="container">
             <div className="row">
             <div className="col-md-12" key={id}>
               

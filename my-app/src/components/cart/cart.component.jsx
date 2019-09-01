@@ -1,10 +1,11 @@
 import React from 'react';
 import './cart.component.css';
-import Cartdropdown from '../carddropdown/cartdropdown.component';
 import {connect} from 'react-redux';
 import { toggleCartHidden } from '../../redux/cart/cart.action';
-
-const CartItem = ({toggleCartHidden}) => {
+import {selectcartitemsCount} from '../../redux/cart/cart.selector';
+     
+const CartItem = ({toggleCartHidden,itemCount}) => {
+    console.log('hello....', itemCount);
     return(
         <form className="form-inline">
     {/* <div className="input-group input-group-sm">
@@ -17,7 +18,7 @@ const CartItem = ({toggleCartHidden}) => {
     </div> */}
     <a className="btn btn-danger btn-sm ml-3" onClick={toggleCartHidden}>
         <i className="fa fa-shopping-cart"></i>&nbsp;
-           <span className="badge badge-light">3</span>
+           <span className="badge badge-light">{itemCount}</span>
     </a>    
     {/* <Cartdropdown/> */}
 </form>
@@ -26,6 +27,13 @@ const CartItem = ({toggleCartHidden}) => {
 }
 const mapdispatchToProps = dispatch =>({
     toggleCartHidden: () => dispatch(toggleCartHidden())
-})
+});
 
-export default connect(null,mapdispatchToProps)(CartItem);
+const mapstateToProps = state =>({
+    itemCount: selectcartitemsCount(state)
+});
+// const mapstateToProps = ({cart:{cartItems}}) =>({
+// itemCount:cartItems.reduce((currentquantity,item) => currentquantity + item.quantity,0)
+// });
+
+export default connect(mapstateToProps,mapdispatchToProps)(CartItem);

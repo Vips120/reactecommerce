@@ -3,8 +3,12 @@ import { Link } from "react-router-dom";
 import { auth } from "../../components/firebase/firebase.util";
 import './headerpage.component.css';
 import { connect } from "react-redux";
+import {createStructuredSelector} from 'reselect';
 import CartItem from '../../components/cart/cart.component';
 import Cartdropdown from '../../components/carddropdown/cartdropdown.component';
+import {currentUsers} from '../../redux/user/user.selector';
+import {cartHidden} from '../../redux/cart/cart.selector';
+
 const Headerpage = ({ currentUser,hidden }) => {
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-primary">
@@ -86,9 +90,13 @@ const Headerpage = ({ currentUser,hidden }) => {
     </nav>
   );
 };
-const mapStateToProps = state => ({
-  currentUser: state.user.currentUser,
-  hidden:state.cart.hidden
+// const mapStateToProps = state => ({
+//   currentUser: state.user.currentUser,
+//   hidden:state.cart.hidden
+// });
+const mapStateToProps = createStructuredSelector({
+  currentUser: currentUsers,
+  hidden:cartHidden
 });
 
 export default connect(mapStateToProps)(Headerpage);
