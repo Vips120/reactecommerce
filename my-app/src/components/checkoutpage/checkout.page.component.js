@@ -35,7 +35,6 @@ let Checkoutitem = ({data,removeItemcart,addItem,removeitem}) => {
 		</td>
 		<td data-th="Subtotal" className="text-center">{price * quantity}</td>
 		<td className="actions" >
-			<button className="btn btn-success btn-sm btn-sm1"><i className="fa fa-refresh"></i></button>
 			<button className="btn btn-danger btn-sm btn-sm1"
 			onClick={() => removeItemcart(data)}
 			><i className="fa fa-trash-o"></i></button>								
