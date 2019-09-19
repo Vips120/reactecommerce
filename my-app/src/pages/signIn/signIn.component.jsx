@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Forminput from '../../components/formInput/form-input.component';
 import {signInwithGoogle} from '../../components/firebase/firebase.util';
 import './signIn.component.css';
+import {Link} from 'react-router-dom';
 class SignInPage extends Component {
          constructor(props){
              super(props);
@@ -61,7 +62,7 @@ class SignInPage extends Component {
         />
     </div>                      
         <button type="submit" className="btn btn-primary btn-block form-control"> Create Account  </button>
-    <p className="text-center">Have an account? <a href="">Sign Up</a> </p>                                                          
+    <p className="text-center">Have an account? <Link to="/signup">Sign Up</Link> </p>                                                          
 </form>
 </article>
 </div> 

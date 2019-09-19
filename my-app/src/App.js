@@ -12,6 +12,7 @@ import SignInPage from './pages/signIn/signIn.component';
 import {auth} from './components/firebase/firebase.util';
 import Checkoutpage from './pages/checkoutpages/checkoutpages';
 import {createStructuredSelector} from 'reselect';
+import SignUpComponent from './components/signup/signup.component';
 
 
 class App extends Component {
@@ -41,6 +42,7 @@ componentWillUnmount(){
       <Route path="/shop" component={ShopPage}/>
       <Route path="/checkout" component={Checkoutpage}/>
       <Route exact path="/contact" render={() => this.props.setcurrentUser ? (<Redirect to="/" />) : (<SignInPage/>) }></Route>
+      <Route exact path="/signup" component={SignUpComponent}/>
       </Switch>
     </div>
   );
